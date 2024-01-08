@@ -1,0 +1,52 @@
+﻿<Window x:Class="_301270677_prathan__Lab02.BooksListWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_301270677_prathan__Lab02"
+        mc:Ignorable="d"
+        Title="BooksListWindow" Height="450" Width="900" Closed="close_BookListWindow">
+    <Window.Resources>
+        <local:AuthorsConverter x:Key="AuthorsConverter" />
+    </Window.Resources>
+    <Grid>
+        <StackPanel>
+            <!-- StatusBar -->
+            <StatusBar Width="auto" Background="CadetBlue" Height="60" VerticalAlignment="Top">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Label x:Name="Hello_lbl" Content="Hello" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Center" FontSize="16" Grid.Column="0"/>
+                    <Label x:Name="userName_lbl" Width="173" FontSize="16" Foreground="#FF611AB9" FontWeight="Bold" VerticalAlignment="Center" Grid.Column="1"/>
+                </Grid>
+            </StatusBar>
+            <!--</ItemsControl>-->
+            <ItemsControl Grid.Row="1" Margin="0,20,0,0" ItemsSource="{Binding BookTitles}">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <WrapPanel Orientation="Horizontal" />
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Button Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" BorderBrush="Transparent" Background="Transparent"  PreviewMouseDoubleClick="BookTitle_btn_DoubleClick">
+                            <Border Padding="10" BorderBrush="CadetBlue" BorderThickness="1" Margin="10,10,10,10">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="auto"/>
+                                        <RowDefinition Height="auto"/>
+                                    </Grid.RowDefinitions>
+                                    <TextBlock Text="{Binding BookTitle}" FontWeight="Bold" FontSize="16" />
+                                    <TextBlock Grid.Row="1" Text="{Binding Author, Converter={StaticResource AuthorsConverter}}" />
+                                </Grid>
+                            </Border>
+                        </Button>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </StackPanel>
+    </Grid>
+</Window>

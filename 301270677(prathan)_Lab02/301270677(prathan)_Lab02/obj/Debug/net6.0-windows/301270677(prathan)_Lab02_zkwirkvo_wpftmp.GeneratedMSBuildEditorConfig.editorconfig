@@ -1,0 +1,11 @@
+is_global = true
+build_property.TargetFramework = net6.0-windows
+build_property.TargetPlatformMinVersion = 7.0
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = _301270677_prathan__Lab02
+build_property.ProjectDir = C:\Users\sorad\Desktop\Centennial College Fall 2023\COMP306-API\Assignment2\Submission\301270677(prathan)_Lab02\301270677(prathan)_Lab02\

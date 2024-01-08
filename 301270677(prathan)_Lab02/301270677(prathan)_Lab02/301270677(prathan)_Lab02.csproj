@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <RootNamespace>_301270677_prathan__Lab02</RootNamespace>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="bookmark_icon.png" />
+    <None Remove="centennialcollege.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AWSSDK.Core" Version="3.7.202.14" />
+    <PackageReference Include="AWSSDK.DynamoDBv2" Version="3.7.202" />
+    <PackageReference Include="AWSSDK.S3" Version="3.7.205" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="7.0.0" />
+    <PackageReference Include="Syncfusion.PdfViewer.WPF" Version="23.1.38" />
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="7.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="bookmark_icon.png" />
+    <Resource Include="centennialcollege.png" />
+  </ItemGroup>
+
+</Project>

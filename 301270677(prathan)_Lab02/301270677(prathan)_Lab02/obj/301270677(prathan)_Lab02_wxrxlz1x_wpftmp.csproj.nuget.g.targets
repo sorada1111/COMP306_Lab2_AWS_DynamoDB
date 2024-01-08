@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Import Project="$(NuGetPackageRoot)system.text.json\7.0.0\buildTransitive\net6.0\System.Text.Json.targets" Condition="Exists('$(NuGetPackageRoot)system.text.json\7.0.0\buildTransitive\net6.0\System.Text.Json.targets')" />
+    <Import Project="$(NuGetPackageRoot)syncfusion.pdftoimageconverter.wpf\23.1.36\build\net6.0-windows7.0\Syncfusion.PdfToImageConverter.WPF.targets" Condition="Exists('$(NuGetPackageRoot)syncfusion.pdftoimageconverter.wpf\23.1.36\build\net6.0-windows7.0\Syncfusion.PdfToImageConverter.WPF.targets')" />
+  </ImportGroup>
+</Project>
